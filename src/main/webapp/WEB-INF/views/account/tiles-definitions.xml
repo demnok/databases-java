@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+    "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+    "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition name="account/edit" extends="mainLayout">
+     	<put-attribute name="header" value="Edit an account" />
+    	<put-attribute name="body" value="/WEB-INF/views/account/edit.jsp"/>
+    </definition>
+    <definition name="account/view" extends="mainLayout">
+     	<put-attribute name="header" value="Showing the account name" />
+    	<put-attribute name="body" value="/WEB-INF/views/account/view.jsp"/>
+	</definition>
+</tiles-definitions>
