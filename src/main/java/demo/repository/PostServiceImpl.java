@@ -44,7 +44,7 @@ public class PostServiceImpl extends PostServiceI {
 	
 	@Override
 	@Transactional
-	public List<Post> findByPost(Post post){
+	public  List<Post> findByPost(Post post){
 		
 		TypedQuery<Post> query = em.createQuery("select a from Post a where a.post = ?1", Post.class);
 		query.setParameter(1,post);

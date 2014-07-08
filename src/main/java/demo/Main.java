@@ -1,7 +1,11 @@
 package demo;
 
+import java.util.List;
+
+import demo.domain.Post;
 import demo.repository.PostServiceImpl;
 
+import org.hsqldb.rights.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -18,8 +22,16 @@ public class Main {
 //		List<Account> accounts = accountRepository.getAccounts();
 //		System.out.println("accounts = " + accounts.size());
 		
-		
-		context.getBean(PostServiceImpl.class);
+//		User georgica = new User();
+//		georgica.setUserName("string");
+//		
+//		context.getBean(PostServiceImpl.class);
+//		Post post = new Post();
+//		post.setPostTitle("Whatev");
+//		post.setPostDate("12321312");
+//		post.setPostBody("Whatevs");
+//		post.setUser(georgica);
+//		List<Post> posts = PostServiceImpl.findByPost(post);
 		
 	}
 }
