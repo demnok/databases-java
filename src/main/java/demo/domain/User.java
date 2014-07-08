@@ -17,7 +17,7 @@ public class User {
 
 	@Id
 	@Column (name="id", nullable=false)
-	private int id;
+	private Long id;
 	
 	@Column (name="user_name", length=100)
 	private String userName;
@@ -40,11 +40,11 @@ public class User {
 		
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

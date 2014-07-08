@@ -1,7 +1,5 @@
 package demo.domain;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,7 +13,7 @@ public class Vote {
 
 	@Id
 	@Column(name = "id", nullable = false)
-	private int id;
+	private Long id;
 
 	@Column(name = "pozitive_vote")
 	private boolean pozitiveVote;
@@ -31,11 +29,11 @@ public class Vote {
 	public Vote() {
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
