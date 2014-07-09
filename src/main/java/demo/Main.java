@@ -25,13 +25,12 @@ public class Main {
 //		User georgica = new User();
 //		georgica.setUserName("string");
 //		
-//		context.getBean(PostServiceImpl.class);
-//		Post post = new Post();
-//		post.setPostTitle("Whatev");
-//		post.setPostDate("12321312");
-//		post.setPostBody("Whatevs");
-//		post.setUser(georgica);
-//		List<Post> posts = PostServiceImpl.findByPost(post);
-		
+		PostServiceImpl serv = context.getBean(PostServiceImpl.class);
+		Post post = new Post();
+		post.setPostTitle("Whatev");
+		post.setPostDate("12321312");
+		post.setPostBody("Whatevs");
+		List<Post> posts = serv.findByPost(post);
+		System.out.println("size post " + posts.size());
 	}
 }
