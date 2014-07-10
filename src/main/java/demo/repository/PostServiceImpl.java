@@ -9,7 +9,9 @@ import javax.persistence.TypedQuery;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import demo.domain.Account;
 import demo.domain.Post;
+import demo.domain.User;
 
 
 @Service
@@ -49,6 +51,14 @@ public class PostServiceImpl extends PostServiceI {
 		TypedQuery<Post> query = em.createQuery("select a from Post a where a.id = ?1", Post.class);
 		query.setParameter(1,post.getId());
 		
+		return query.getResultList();
+	}
+	
+	
+	public List<Post> getPosts(User user){
+		
+		TypedQuery <Post> query = em.createNamedQuery(Post.FIND_ALL, Post.class);
+		query.setParameter("user", user);
 		return query.getResultList();
 	}
 }

@@ -36,6 +36,15 @@ public class User {
     		@JoinColumn(name=   "id_friend"),  inverseJoinColumns =  @JoinColumn(name = "id_user")) 
     private List<User> friends;
 	
+	public List<User> getFriends() {
+		return friends;
+	}
+
+	public void setFriends(List<User> friends) {
+		this.friends = friends;
+	}
+	
+
 	public User(){
 		
 	}

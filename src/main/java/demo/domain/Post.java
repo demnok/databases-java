@@ -5,11 +5,20 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+@NamedQueries({
+    @NamedQuery(name = Post.FIND_ALL, query = "select a from Post a order by a.name"),
+    @NamedQuery(name = Post.FIND_POSTS_BY_USER, query = "select a from Post a where user:= user")
+})
 @Entity
 @Table (name="en_posts")
 public class Post {
+	
+	public static final String FIND_ALL = "Post.findAll";
+	public static final String FIND_POSTS_BY_USER = "Post.findByUser";
 	
 	@Id
 	@Column (name="id", nullable=false)

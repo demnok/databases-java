@@ -12,6 +12,13 @@
 	<context:component-scan base-package="demo" />
 	<context:annotation-config />
 
+	<bean id="emailService" class="demo.repository.EmailService">
+		<property name="fromField" value="destination"></property>
+		<property name="subjectField" value="title"></property>
+		<property name="introPart" value="intro"></property>
+		<property name="endingPart" value="outro"></property>
+	</bean>
+
 	<!-- Defines the entity manager factory -->
 	<bean id='entityManagerFactory'
 		class='org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean'>
